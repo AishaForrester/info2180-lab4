@@ -1,5 +1,38 @@
+h1 {
+    color: white;
+}
 .Sections {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+form input {
+    width: 500px;
+    height: 25px;
+    margin-right: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-color: #E2E8F0;
+}
+.btn {
+    height: 32px;
+    background-color: pink;
+    border-radius: 5px;
+    border: none;
+    width: 70px;
+    padding: 5px;
+}
+.btn:hover {
+    background-color: bisque;
+}
+.headSection {
+    background-color: rgb(173, 88, 197);
+    margin-bottom: 10px;
 }

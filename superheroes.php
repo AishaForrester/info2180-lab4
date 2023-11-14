@@ -63,10 +63,20 @@ $superheroes = [
   ], 
 ];
 
+
+
+$searchTerm = isset($_GET['query']) ? $_GET['query'] : '';
+
+// Filter superheroes based on alias or name
+$matchingSuperheroes = array_filter($superheroes, function ($superhero) use ($searchTerm) {
+    return stripos($superhero['alias'], $searchTerm) !== false || stripos($superhero['name'], $searchTerm) !== false;
+});
+
+// Return the filtered superhero information
+echo json_encode($matchingSuperheroes);
+
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+
+
+
